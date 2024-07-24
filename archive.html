@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>アーカイブ一覧 | ITセミナー同好会</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    </head>
+    <body>
+        <header class="text-gray-600 body-font">
+            <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+                <a href="index.html" class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"><svg xmlns="http://www.w3.org/2000/svg" fill="#fff" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 p-2 text-transparent bg-blue-500 rounded-full" viewBox="0 0 24 24"><path d="M17.118,9.341c-1.104-2.126-3.472-3.419-5.973-3.044c-2.502,0.375-4.386,2.305-4.818,4.662
+                    c-3.285,0.865-5.436,1.896-5.317,2.689c0.119,0.794,2.478,1.148,5.872,1.012c1.104,2.126,3.472,3.418,5.974,3.043
+                    s4.386-2.305,4.818-4.662c3.285-0.865,5.436-1.896,5.317-2.689C22.871,9.559,20.512,9.204,17.118,9.341 M6.387,13.326
+                    c-0.949-0.039-1.531-0.178-1.567-0.419c-0.037-0.244,0.493-0.553,1.413-0.873c0.001,0.271,0.022,0.545,0.063,0.822
+                    C6.321,13.015,6.351,13.172,6.387,13.326 M17.56,13.064c-1.535,0.404-3.323,0.772-5.242,1.06c-1.919,0.288-3.736,0.461-5.322,0.525
+                    c-0.211-0.406-0.375-0.844-0.483-1.306c1.317,0.054,3.356-0.09,5.624-0.43c2.268-0.34,4.26-0.801,5.503-1.239
+                    C17.671,12.148,17.643,12.614,17.56,13.064 M17.754,11.622c-0.011-0.158-0.027-0.317-0.051-0.477
+                    c-0.042-0.276-0.103-0.544-0.18-0.804c0.973,0.037,1.57,0.177,1.606,0.42C19.165,11.002,18.65,11.306,17.754,11.622"/>
+                </svg><span class="ml-3 text-xl">ITセミナー同好会</span></a>
+                <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                    <a class="mr-5 hover:text-gray-900 md:pr-4 md:border-r md:border-gray-300">セミナー開催について</a>
+                    <a class="mr-5 hover:text-gray-900 md:pr-4 md:border-r md:border-gray-300">メンバー一覧</a>
+                    <a class="mr-5 hover:text-gray-900 md:pr-4 md:border-r md:border-gray-300" href="archive.html">アーカイブ</a>
+                    <a class="mr-5 hover:text-gray-900 md:pr-4 md:border-r md:border-gray-300">お問い合わせ</a>
+                </nav>
+                <button class="inline-flex items-center bg-yellow-300 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">todoEBA <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+                        <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                </button>
+            </div>
+        </header>
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-24 mx-auto">
+                <div class="flex flex-col">
+                    <div class="h-1 bg-gray-200 rounded overflow-hidden">
+                        <div class="w-24 h-full bg-blue-500"></div>
+                    </div>
+                    <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
+                        <h2 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">イベントアーカイブ一覧</h2>
+                        <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">会員参加者だけが見れるアーカイブです。各項目ごとの見出しを選択し、絞り込みを行うことで、必要なイベントを見つけてください。</p>
+                    </div>
+                </div>
+                <div class="w-full mx-auto overflow-auto">
+                    <table class="table-auto w-full text-left whitespace-no-wrap">
+                        <thead>
+                            <tr>
+                                <th class="py-5 pl-12 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100 rounded-tl rounded-bl">タイトル</th>
+                                <th class="py-5 pl-20 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">カテゴリー</th>
+                                <th class="py-5 pl-8 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">難易度</th>
+                                <th class="py-5 pl-12 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">開催日</th>
+                                <th class="py-5 pl-12 title-font tracking-wider font-medium text-gray-900 text-sm bg-gray-100">講師</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">Next.jsのServerAction</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">React</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Typescript</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">SQL</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level5</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2024年7月28日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">田中 太郎</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Front Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">Railsチュートリアル前編</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Ruby</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">SQL</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Rails</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level5</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年11月7日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">青山 美加子</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Back Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">NumPy/Keras操作理解入門</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Python</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">NumPy</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Keras</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level4</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年10月31日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">桐山 結衣</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Back Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">GoogleFormスプシ連携</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">JS</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">AppsScript</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">VBA</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level3</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年10月25日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">青山 裕太</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Front Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">Pythonスクレイピング</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Python</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Beautifulsoup</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level4</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年9月11日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">近藤 太郎</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Back Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">Linux/Gitコマンドカスタム</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Linux</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Git</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Typing</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level3</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年8月14日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">津田 翔太</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Back Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">BunのElyaisJSでDB連携</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">JS</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Bun</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">API</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level4</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年7月12日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">野村 稔</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Front Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">Photoshop画像作成</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Photoshop</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Design</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level2</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年6月25日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">鈴木 智也</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Designer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">SveltKitのRoutingと判定</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">JS</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Svelte</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">RouteAPI</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level5</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年5月23日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">木村 直樹</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Front Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="border-b border-dotted border-gray-300  hover:bg-gray-100">
+                                <td class="py-5 text-2xl font-bold text-gray-600">AWS EC2にDockerの設定</td>
+                                <td class="py-5">
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">AWS</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">Docker</span>
+                                    <span class="inline-block py-1 px-2 rounded bg-gray-100 text-gray-400 font-medium tracking-widest">FastAPI</span>
+                                </td>
+                                <td class="py-5">
+                                    <li class="flex items-center">
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-3 h-3 text-blue-500" viewBox="0 0 24 24">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                        </svg>
+                                        <span class="text-gray-400 ml-1 text-sm">Level3</span>
+                                    </li>
+                                </td>
+                                <td class="py-5 text-lg text-gray-600 text-sm">2023年4月1日(土)</td>
+                                <td class="py-5">
+                                    <div class="flex justify-between items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke="currentColor" class="w-10 h-10 rounded text-gray-400 bg-gray-200 flex-shrink-0 object-contain object-center" viewBox="-3 -3 30 30">
+                                            <path d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                                        </svg>
+                                        <span class="flex-grow flex flex-col pl-2">
+                                            <span class="title-font font-medium text-gray-900">山本 晃</span>
+                                            <span class="text-gray-400 text-xs tracking-tight mt-0.5">Infra Engineer</span>
+                                        </span>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <footer class="text-gray-600 body-font">
+            <div class="container flex flex-wrap px-5 py-8 mx-auto items-center">
+                <div class="md:w-1/2 md:pr-12 md:py-8 md:border-r md:border-b-0 mb-10 md:mb-0 pb-10 border-b border-gray-200">
+                    <h3 class="text-xl font-medium title-font mb-3 text-gray-800">ITセミナー同好会</h3>
+                    <p class="leading-relaxed text-base text-xs mb-3">この同好会の活動目的は、参加者に対し2つのニーズを満たせる場を提供することです。1つは、現場で貯めた知見を、<strong>他の人たちにアウトプット</strong>する場、もう1つは、独学だと中々進まない項目を、<strong>効率よく理解したい</strong>という場、この2者のニーズをマッチングできることを目標としています。</p>
+                    <small>Copyright &copy; 2024 <a href="" class="text-blue-500 font-bold">IT Semminer</a> Allright reserved.</small>
+                </div>
+                <div class="flex flex-col md:w-1/2 md:pl-12">
+                    <h2 class="title-font font-semibold text-gray-800 tracking-wider text-sm mb-3">その他のリンク</h2>
+                    <nav class="flex flex-wrap list-none -mb-1">
+                        <li class="lg:w-1/3 mb-1 w-1/2">
+                            <a class="text-gray-600 hover:text-gray-800 text-sm">カテゴリータグ一覧</a>
+                        </li>
+                        <li class="lg:w-1/3 mb-1 w-1/2">
+                            <a class="text-gray-600 hover:text-gray-800 text-sm">ITセミナーのルール・規則</a>
+                        </li>
+                        <li class="lg:w-1/3 mb-1 w-1/2">
+                            <a class="text-gray-600 hover:text-gray-800 text-sm">今後の拡張方針</a>
+                        </li>
+                        <li class="lg:w-1/3 mb-1 w-1/2">
+                            <a class="text-gray-600 hover:text-gray-800 text-sm">Youtube</a>
+                        </li>
+                        <li class="lg:w-1/3 mb-1 w-1/2">
+                            <a class="text-gray-600 hover:text-gray-800 text-sm">Notion</a>
+                        </li>
+                        <li class="lg:w-1/3 mb-1 w-1/2">
+                            <a class="text-gray-600 hover:text-gray-800 text-sm">Instagram</a>
+                        </li>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
